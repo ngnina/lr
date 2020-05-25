@@ -1,0 +1,33 @@
+* {	margin: 0px; padding: 0px;}
+main {background-color: rgb(133, 202, 241);}
+.d {margin-left: auto; margin-right: auto;text-align: center; background-color: rgb(235, 235, 235);}
+.d1 {display: inline-block; margin: 10px 20px; width: 250px;font-family: 'Amatic SC', cursive; font-size: 25px;}
+.d2 {color: rgb(0, 126, 255);} /*стиль ссылки*/
+.d2:hover {text-decoration: none;}
+img {height: 240px; border: 2px solid; border-color: transparent; box-sizing: border-box;}
+img:hover {border: 2px solid rgb(28, 180, 226);box-sizing: border-box;} 
+
+
+@media (min-width: 480px) {
+    .d {  width: 480px;}
+	#text:after {  content: "480"; }
+	
+}
+@media (min-width: 960px) {
+    .d { width: 850px;}
+    #text:after {  content: "850"; }
+}
+@media (min-width: 1200px) {
+    .d { width: 1200px;}
+    #text:after {  content: "1200"; }
+}
+
+.d11:after {content: "зав.каф., професор, д.е.н.";}
+.d12:after {content: "професор, д.ф.-м.н.";}
+.d13:after {content: "професор, д.е.н.";}
+.d14:after {content: "доцент, к.е.н.";}
+.d15:after {content: "доцент, к.т.н.";}
+.d16:after {content: "доцент, к.ф.-м.н.";}
+.d17:after {content: "ст. викладач";}
+.d18:after {content: "викладач";}
+.d19:after {content: "аспірант";}
