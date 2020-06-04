@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("Четные числа от 0 до 10:");
+        for (let i = 0; i <= 10; i++) {
+            if (i % 2 == 0) { console.log(i); }
+        }
+
+        console.log("Числа, кратные 2:");
+        let dva = 0;
+        let kolvo = 0;
+        while(kolvo<10){
+            if(dva%2==0){
+                console.log(dva);
+                kolvo++;
+            }
+            dva++;
+        }
+        console.log("Число элементов:",kolvo);
+
+        let tri = "";
+        while(tri!="."){
+            tri = prompt("Введите что-то, желательно точку");
+            console.log(tri);
+        }
+
+        let n = prompt("Введите число n:");
+        let zvzd="";
+        let z = 0;
+        do{
+            zvzd+="*";
+            z++;
+        } while (z<n);         
+        console.log(zvzd);
+
+    </script>
+</body>
+
+</html>
