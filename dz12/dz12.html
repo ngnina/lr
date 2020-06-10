@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="kh1">Ф.И.О.: </div>
+    <div id="kh2">Возраст: </div>
+    <div id="kh3">Ученая степень: </div>
+    <div id="kh4">Факультет: </div>
+    <div id="kh5">Кафедра: </div>
+    <script>
+      class prof {
+            constructor(name, age, faclt, kaf) {
+            this.name = name;
+            this.age = 35;
+            this.faclt = "псевдоэкономический";
+            this.kaf ="кибернетической экономики";
+        }
+        setUStep(stepen){
+            this.step = stepen;
+        }
+        getUStep(){
+            return this.step;
+        }
+        }
+        let pr = new prof("Прокофьев Анастасий Игнатович");
+        kh1.append(pr.name);
+        kh2.append(pr.age);
+        pr.setUStep("к.э.н.");
+        kh3.append(pr.getUStep());
+        kh4.append(pr.faclt);
+        kh5.append(pr.kaf);
+    </script>
+</body>
+
+</html>
