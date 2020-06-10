@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="in1" value="">
+    <input id="in2" value="">
+    <button onclick="f_out()">найти сумму</button>
+    <script>
+        console.log("Результат умножения на 6:");
+        var a = 6 * 1; console.log(a);
+        a = 6 * 2; console.log(a);
+        a = 6 * 3; console.log(a);
+        a = 6 * 4; console.log(a);
+        a = 6 * 5; console.log(a);
+        a = 6 * 6; console.log(a);
+        a = 6 * 7; console.log(a);
+        a = 6 * 8; console.log(a);
+        a = 6 * 9; console.log(a);
+
+        var b = prompt("Введите первое слагаемое"); //Ввод через диалоговое окно
+        var c = prompt("Введите второе слагаемое");
+        b = parseInt(b); //преобразование строки в число
+        c = parseInt(c);
+        var sum = b+c;
+        alert("Сумма = "+ sum);
+
+        function f_out() {
+            var in1 = document.getElementById("in1");
+            var in2 = document.getElementById("in2");
+            in1 = parseFloat(in1.value);
+            in2 = parseFloat(in2.value);
+            alert(in1 + in2);
+        }
+    </script>
+</body>
+
+</html>
