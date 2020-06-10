@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p><i>См. консоль</i></p>
+    <script>
+        let aa = Array();
+        aa[0] = 2;
+        aa[1] = 3;
+        aa[2] = 4;
+        aa[3] = 5;
+        aa[4] = 4;
+        aa[5] = 3;
+        aa[6] = 2;
+        aa[7] = 1;
+        aa[8] = 5;
+        aa[9] = 6;
+        console.log("Задание 1");
+        console.log(aa[0] + " " + aa[1] + " " + aa[2] + " " + aa[3] + " " + aa[4] + " " + aa[5] + " " + aa[6] + " " + aa[7] + " " + aa[8] + " " + aa[9]);
+
+        aa[0] = 2;
+        aa[1] = 2 * 2;
+        aa[2] = 2 * 2 * 2;
+        aa[3] = 2 * 2 * 2 * 2;
+        aa[4] = 2 * 2 * 2 * 2 * 2;
+        aa[5] = 2 * 2 * 2 * 2 * 2 * 2;
+        console.log("Задание 2");
+        console.log(aa[0] + " " + aa[1] + " " + aa[2] + " " + aa[3] + " " + aa[4] + " " + aa[5]);
+
+        console.log("Задание 3");let res = "";
+        for (let i = 0; i < 6; i++) {
+            aa[i] = Math.pow(2, i + 1);
+            res += aa[i] + " ";
+        }
+        console.log(res);
+
+        /*aa[0] = 2;
+        let res2 = aa[0]+""
+        for (let i = 1; i < 6; i++) {
+            aa[i] = aa[i-1]*2;
+            res2 += aa[i] + " ";
+        }
+        console.log("Задание 3");
+        console.log(res);*/
+        
+        console.log("Задание 4");
+        aa[0] = Math.floor(Math.random() * 10);
+        aa[1] = aa[0] * 2;
+        aa[2] = aa[1] + 1;
+        aa[3] = aa[0] * aa[1];
+        aa[4] = aa[1] * aa[3];
+        console.log(aa[0] + " " + aa[1] + " " + aa[2] + " " + aa[3] + " " + aa[4]);
+        
+        console.log("Задание 5");
+        let bb = Array();
+        for (let i = 0; i < 10; i++) {
+            bb[i] = parseFloat((Math.random() * 50).toFixed(2));
+            /*bb[i] = Math.floor(Math.random() * 50*100)/100;*/
+        }
+        let str = '';
+        for (let i = 0; i < 10; i++) {
+            str += bb[i] + ' ';
+        }
+        console.log(str);
+        let sum = 0;
+        let n = 0;
+        for (let i = 0; i < bb.length; i++) {
+            sum += bb[i];
+            n += 1;
+        }
+        let avg = sum / n;
+        console.log('Среднее арифметическое элементов массива = ' + avg);
+
+        let el = '';
+        let cc = Array();
+        let massiv = '';
+        let skolkoa = 0;
+        i = 0;
+        while (el != ".") {
+            el = prompt('Введите символ\nЧтобы закончить, введите \".\"');
+            cc[i] = el;
+            massiv += cc[i] + ' ';
+            if (el == "a" || el == "а") skolkoa += 1;
+            i++;
+        }
+        console.log("Задание 6\nВведенные символы: " + massiv);
+        console.log('Кол-во букв \"а\": ' + skolkoa);
+
+        let dd = Array();
+        let lozh = 0;
+        let istina = 0;
+        for (i = 0; i < 6; i++) {
+            dd[i] = Math.random();
+            if (dd[i] < 0.5) {
+                dd[i] = false;
+                lozh += 1;
+            } else {
+                dd[i] = true;
+                istina += 1;
+            }
+        }
+        console.log("Задание 7");
+        console.log(dd[0] + " " + dd[1] + " " + dd[2] + " " + dd[3] + " " + dd[4] + " " + dd[5]);
+        if (lozh < istina) {
+            console.log("Значений «Истина» больше, чем значений «Ложь»");
+        } else if (lozh > istina) {
+            console.log("Значений «Ложь» больше, чем значений «Истина»");
+        } else {
+            console.log("Значений «Ложь» и значений «Истина» одинаковое количество");
+        }
+
+    </script>
+</body>
+
+</html>
