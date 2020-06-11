@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="out"></div>
+    <button id="btn">BTC / USD</button>
+    <button id="btn1">AUD / UAH</button>
+    <script>
+        var request = new XMLHttpRequest();
+        btn.addEventListener("click", sndFnc);
+
+        /*Функция отпрваки запроса*/
+        function sndFnc() {
+            request.open("GET", "https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5");
+            request.onreadystatechange = reqReadyStateChangeUpd;
+            request.send();
+        }
+
+        /*Функция обаботки ответа*/
+        function reqReadyStateChangeUpd() {
+            if (request.readyState == 4) {
+                var status = request.status;
+                if (status == 200) {
+                    obj = JSON.parse(request.responseText);
+                    let res = document.createElement("div");
+                    res.innerHTML = obj[3].ccy + " / " + obj[3].base_ccy + " buy:" + obj[3].buy + " sale:" + obj[3].sale;
+                    console.log(obj);
+                    out.append(res);
+                }
+            }
+        }
+
+        var request_b = new XMLHttpRequest();
+        btn1.addEventListener("click", sndFnc1);
+
+        /*Функция отпрваки запроса*/
+        function sndFnc1() {
+            request_b.open("GET", "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json");
+            request_b.onreadystatechange = reqReadyStateChangeUpd1;
+            request_b.send();
+        }
+
+        /*Функция обаботки ответа*/
+        function reqReadyStateChangeUpd1() {
+            if (request_b.readyState == 4) {
+                var status = request_b.status;
+                if (status == 200) {
+                    obj1 = JSON.parse(request_b.responseText);
+                    let res1 = document.createElement("div");
+                    res1.innerHTML = obj1[0].txt + ", курс: " + obj1[0].rate + ", cc: " + obj1[0].cc + ", дата: " + obj1[0].exchangedate;
+                    console.log(obj1);
+                    out.append(res1);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
