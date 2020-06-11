@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d {
+            display: block;
+            margin: 10px;
+        }
+
+        .otv {
+            display: inline-block;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d">
+        <p>Задание 1</p>
+        <input id="in1" value="">
+        <input id="in2" value="">
+        <button onclick="f_out1()">найти наибольшее число</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans1"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 2</p>
+        <input id="in3" value="">
+        <input id="in4" value="">
+        <input id="in5" value="">
+        <button onclick="f_out2()">найти наибольшее число</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans2"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 3</p>
+        <input type="number" id="x" value="">
+        <input type="number" id="y" value="">
+        <button onclick="f_out3()">определить четверть</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans3"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 4</p>
+        <input id="l" value="">
+        <input id="k1" value="">
+        <button onclick="f_out4()">ввести l, k</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans4"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 5</p>
+        <input id="p" value="">
+        <button onclick="f_out5()">ввести p</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans5"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 6</p>
+        <input id="p1" value="">
+        <button onclick="f_out6()">ввести p</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans6"></p>
+        </div>
+    </div>
+    <div class="d">
+        <p>Задание 7</p>
+        <input id="zd7" value="">
+        <button onclick="f_out7()">ввести a</button>
+        <div class="otv">Ответ: </div>
+        <div class="otv">
+            <p id="ans7"></p>
+        </div>
+        <div class="d">
+            <p>Задание 8</p>
+            <p>Введите трехзначное число</p>
+            <input id="zd8" value="">
+            <button onclick="f_out8()">ввести</button>
+            <div class="otv">Ответ: </div>
+            <div class="otv">
+                <p id="ans8"></p>
+            </div>
+        </div>
+        <div class="d">
+            <p>Задание 9</p>
+            <p>Введите время суток</p>
+            <input type="text" id="vremyas" value="">
+            <button onclick="f_out9()">ввести</button>
+            <div class="otv">Ответ: </div>
+            <div class="otv">
+                <p id="ans9"></p>
+            </div>
+        </div>
+        <div class="d">
+            <p>Задание 10</p>
+            <input type="text" id="num" value="">
+            <button onclick="f_out10()">ввести число</button>
+            <div class="otv">Ответ: </div>
+            <div class="otv">
+                <p id="ans10"></p>
+            </div>
+        </div>
+        <!--#11-->
+        <div class="d">
+            <p>Задание 11</p>
+            <p>Стороны кирпича:</p>
+            <input id="x1" value="">
+            <input id="y1" value="">
+            <input id="z1" value="">
+            <p>Сторона квадрата:</p>
+            <input id="a1" value="">
+            <button onclick="f_out11()">Пройдет ли кирпич?</button>
+            <div class="otv">Ответ: </div>
+            <div class="otv">
+                <p id="ans11"><i></i></p>
+            </div>
+            <div class="d">
+                <p>Задание 12</p>
+                <input type="text" id="x_2" value="">
+                <input type="text" id="y_2" value="">
+                <button onclick="f_out12()">ввести</button>
+                <div class="otv">Ответ: </div>
+                <div class="otv">
+                    <p id="ans12"></p>
+                </div>
+            </div>
+            <div class="d">
+                <p>Задание 13</p>
+                <input type="text" id="x_3" value="">
+                <input type="text" id="y_3" value="">
+                <button onclick="f_out13()">ввести</button>
+                <div class="otv">Ответ: </div>
+                <div class="otv">
+                    <p id="ans13_1"></p>
+                </div>
+                <div class="otv">
+                    <p id="ans13_2"></p>
+                </div>
+            </div>
+            <div class="d">
+                <p>Задание 14</p>
+                <input type="text" id="x_4" value="">
+                <input type="text" id="y_4" value="">
+                <button onclick="f_out14()">ввести</button>
+                <div class="otv">Ответ: </div>
+                <div class="otv">
+                    <p id="ans14"></p>
+                </div>
+            </div>
+            <div class="d">
+                <p>Задание 15</p>
+                <input type="text" id="p_15" value="">
+                <input type="text" id="t_15" value="">
+                <button onclick="f_out15()">ввести</button>
+                <div class="otv">Ответ: </div>
+                <div class="otv">
+                    <p id="ans15_1"></p>
+                </div>
+                <div class="otv">
+                    <p id="ans15_2"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            //#1
+            function f_out1() {
+                var in1 = document.getElementById("in1");
+                var in2 = document.getElementById("in2");
+                in1 = parseFloat(in1.value);
+                in2 = parseFloat(in2.value);
+                if (in1 > in2) {
+                    document.getElementById('ans1').innerHTML = in1;
+                } else if (in2 > in1) {
+                    document.getElementById('ans1').innerHTML = in2;
+                } else {
+                    document.getElementById('ans1').innerHTML = "Числа равны";
+                }
+            }
+            //#2
+            function f_out2() {
+                var in3 = document.getElementById("in3");
+                var in4 = document.getElementById("in4");
+                var in5 = document.getElementById("in5");
+                in3 = parseFloat(in3.value);
+                in4 = parseFloat(in4.value);
+                in5 = parseFloat(in5.value);
+                var bch;
+                if (in3 > in4 && in3 > in5) {
+                    document.getElementById('ans2').innerHTML = in3;
+                } else if (in4 > in3 && in4 > in5) {
+                    document.getElementById('ans2').innerHTML = in4;
+                } else if (in5 > in3 && in5 > in4) {
+                    document.getElementById('ans2').innerHTML = in5;
+                } else {
+                    document.getElementById('ans2').innerHTML = "Нет единственного наибольшего числа";
+                }
+                /*if(in3>in4) {
+                    bch=in3;
+                } else if(in4>in5) {
+                    bch=in4;
+                } else {bch=in5;}
+                alert(bch); вывод наибольшего значения, мб одинаковые макс числа*/
+                /* var max;
+                 if(in3>in4) {
+                     max=in3;
+                 } else {
+                     max=in4;
+                 }
+                 if(in5>max) {
+                     max=in5;
+                 }
+                 alert(max); вывод наибольшего значения, мб одинаковые макс числа*/
+            }
+            //#3  
+            function f_out3() {
+                var x = document.getElementById("x");
+                var y = document.getElementById("y");
+                x = parseFloat(x.value);
+                y = parseFloat(y.value);
+                var k = 0;
+                if (x > 0 && y > 0) {
+                    document.getElementById('ans3').innerHTML = "I четверть";
+                    k = 1;
+                } else if (x < 0 && y > 0) {
+                    document.getElementById('ans3').innerHTML = "II четверть";
+                    k = 2;
+                } else if (x < 0 && y < 0) {
+                    document.getElementById('ans3').innerHTML = "III четверть";
+                    k = 3;
+                } else if (x > 0 && y < 0) {
+                    document.getElementById('ans3').innerHTML = "IV четверть";
+                    k = 4;
+                } else {
+                    document.getElementById('ans3').innerHTML = "Точка находится на оси";
+                }
+                console.log("Задание 3: k=", k);
+            }
+            //#4
+            function f_out4() {
+                var l = document.getElementById("l");
+                var k1 = document.getElementById("k1");
+                l = parseInt(l.value);
+                k1 = parseInt(k1.value);
+                /*l = parseFloat(l);
+                l=Math.floor(l); 
+                k1 = parseFloat(k1);
+                k1=Math.floor(k1);*/
+                if (l < k1) {
+                    l = k1;
+                } else if (l > k1) {
+                    k1 = l;
+                } else {
+                    l = 0;
+                    k1 = 0;
+                }
+                document.getElementById('ans4').innerHTML = "l=" + l + ", k=" + k1;
+            }
+            //#5
+            function f_out5() {
+                var p = document.getElementById("p");
+                p = parseInt(p.value);
+                if (p % 2 == 0 && p > 9 && p < 100) {
+                    document.getElementById('ans5').innerHTML = "p является четным двузначным числом";
+                } else {
+                    document.getElementById('ans5').innerHTML = "p не является четным двузначным числом";
+                }
+            }
+            //#6
+            function f_out6() {
+                var p1 = document.getElementById("p1");
+                p1 = parseInt(p1.value);
+                if (p1 > 0 && p1 % 3 == 0) {
+                    document.getElementById('ans6').innerHTML = "число p является положительным и кратным 3";
+                } else {
+                    document.getElementById('ans6').innerHTML = "число p не является положительным и кратным 3";
+                }
+            }
+
+            //#7
+            function f_out7() {
+                var zd7 = document.getElementById("zd7");
+                zd7 = parseInt(zd7.value);
+                if (zd7 % 2 == 0 && zd7 % 3 == 0) {
+                    document.getElementById('ans7').innerHTML = "a=" + zd7 + " кратно 2 и 3";
+                    if (zd7 % 2 == 0 && zd7 % 5 != 0) {
+                        document.getElementById('ans7').innerHTML = "a=" + zd7 + " кратно 2 и 3, " + "a=" + zd7 + " кратно 2 и не кратно 5";
+                    }
+                } else if (zd7 % 2 == 0 && zd7 % 5 != 0) {
+                    document.getElementById('ans7').innerHTML = "a=" + zd7 + " кратно 2 и не кратно 5";
+                } else if (zd7 > 0 && zd7 < 3) {
+                    document.getElementById('ans7').innerHTML = "a=" + zd7 + " находится в пределах (0,3)";
+                } else if (zd7 >= -2 && zd7 <= 0) {
+                    document.getElementById('ans7').innerHTML = "a=" + zd7 + " находится в пределах [-2,0]";
+                } else {
+                    document.getElementById('ans7').innerHTML = "a=" + zd7 + " не удовлетворяет условиям";
+                }
+
+            }
+
+            //#8
+            function f_out8() {
+                var zd8 = document.getElementById("zd8").value;
+                var cyf3 = zd8 % 10;
+                var cyf1 = (zd8 - zd8 % 100) / 100; if (cyf3 == cyf1) {
+                    document.getElementById('ans8').innerHTML = zd8 + " является палиндромом";
+                } else {
+                    document.getElementById('ans8').innerHTML = zd8 + " не является палиндромом";
+                }
+
+            }
+
+
+            //#9
+            function f_out9() {
+                var vremya = document.getElementById("vremyas").value;
+                if (vremya == "утро" || vremya == "Утро" || vremya == "utro") {
+                    document.getElementById('ans9').innerHTML = "Доброе утро";
+                } else {
+                    document.getElementById('ans9').innerHTML = "Добрый " + vremya;
+                }
+            }
+
+            //#10
+            function f_out10() {
+                var number, result;
+                number = document.getElementById('num').value;
+                if (number % 10 == 5) {
+                    result = 'Число делится на 5';
+                }
+                else if (number % 10 == 0) {
+                    result = 'Число делится на 5';
+                }
+                else {
+                    result = 'Число не делится на 5';
+                }
+                document.getElementById('ans10').innerHTML = result;
+            }
+
+            //#11
+            function f_out11() {
+                var x1 = document.getElementById("x1");
+                var y1 = document.getElementById("y1");
+                var z1 = document.getElementById("z1");
+                var a1 = document.getElementById("a1");
+                x1 = parseFloat(x1.value);
+                y1 = parseFloat(y1.value);
+                z1 = parseFloat(z1.value);
+                a1 = parseFloat(a1.value);
+                if (x1 * y1 < a1 * a1 || x1 * z1 < a1 * a1 || z1 * y1 < a1 * a1) {
+                    document.getElementById('ans11').innerHTML = "кирпич пройдет";
+                } else {
+                    document.getElementById('ans11').innerHTML = "кирпич не пройдет";
+                }
+            }
+            //#12
+            function f_out12() {
+                var a, b, result;
+                a = document.getElementById('x_2').value;
+                b = document.getElementById('y_2').value;
+
+                if (a > 0) {
+                    if (a > b) {
+                        result = a;
+                    }
+                    else {
+                        result = b;
+                    }
+                }
+                else if (a <= 0) {
+                    if (a < b) {
+                        result = a;
+                    }
+                    else {
+                        result = b;
+                    }
+                }
+                document.getElementById('ans12').innerHTML = result;
+            }
+            //#13
+            function f_out13() {
+                var a, b, c, d, result_a, result_b;
+                a = document.getElementById('x_3').value;
+                b = document.getElementById('y_3').value;
+
+                c = a;
+                d = b;
+
+                if (a > b) {
+                    b = c / 2 + d / 2;
+                    a = c * d;
+                    result_a = a;
+                    result_b = b;
+                }
+                else {
+                    a = c / 2 + d / 2;
+                    b = c * d;
+                    result_b = b;
+                    result_a = a;
+                }
+                document.getElementById('ans13_1').innerHTML = result_a;
+                document.getElementById('ans13_2').innerHTML = result_b;
+            }
+            //#14
+            function f_out14() {
+                var a, b, result;
+                a = document.getElementById('x_4').value;
+                b = document.getElementById('y_4').value;
+
+                if (a % 2 == 0) {
+                    if (a > b) {
+                        result = a;
+                    }
+                    else {
+                        result = b;
+                    }
+                }
+                else {
+                    result = a / 2 + b / 2
+                }
+                document.getElementById('ans14').innerHTML = result;
+            }
+            //#15
+            function f_out15() {
+                var a, b, result_ed, result_ost;
+                a = document.getElementById('p_15').value;
+                b = document.getElementById('t_15').value;
+
+                if (a > b) {
+                    result_ed = a % 10;
+                    result_ost = result_ed % 3;
+                }
+                else {
+                    result_ed = b % 10;
+                    result_ost = result_ed % 3;
+                }
+                document.getElementById('ans15_1').innerHTML = result_ed;
+                document.getElementById('ans15_2').innerHTML = result_ost;
+            }
+        </script>
+
+
+</body>
+
+</html>
